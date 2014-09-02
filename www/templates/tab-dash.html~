@@ -1,5 +1,28 @@
 <ion-view title="Dashboard">
   <ion-content class="has-header padding">
     <h1>Dash</h1>
+    <div>
+	<label class="item item-input">
+	  <span class="input-label">Email</span>
+	  <input type="email" ng-model="email">
+	</label>
+	
+	<label class="item item-input">
+  	<span class="input-label">Senha</span>
+  	<input type="password">
+	</label>
+	<label class="item item-input">
+  	<span class="input-label">Data de nascimento</span>
+  	<input type="date">
+	</label>
+    </div>	
+    <div class="button-bar" style="padding: 10px">
+	<button class="button button-stable" ng-click="cadastrar()">
+  		Cadastrar
+	</button>
+	<button class="button button-stable">
+  		cancelar
+	</button>
+   </div>	 	
   </ion-content>
 </ion-view>
