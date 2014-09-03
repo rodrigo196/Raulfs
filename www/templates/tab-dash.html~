@@ -7,14 +7,20 @@
 	  <input type="email" ng-model="email">
 	</label>
 	
+	{{ email }}
 	<label class="item item-input">
   	<span class="input-label">Senha</span>
-  	<input type="password">
+  	<input type="password" ng-model="senha">
 	</label>
+	
+	{{ senha }}
+		
 	<label class="item item-input">
   	<span class="input-label">Data de nascimento</span>
-  	<input type="date">
+  	<input type="date" ng-model="dataNascimento">
 	</label>
+
+	{{ dataNascimento }}
     </div>	
     <div class="button-bar" style="padding: 10px">
 	<button class="button button-stable" ng-click="cadastrar()">
@@ -23,6 +29,7 @@
 	<button class="button button-stable">
   		cancelar
 	</button>
-   </div>	 	
+   </div>
+	 	
   </ion-content>
 </ion-view>

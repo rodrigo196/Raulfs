@@ -4,18 +4,21 @@
     <div>
 	<label class="item item-input">
 	  <span class="input-label">Email</span>
-	  <input type="email" ng-model="senha">
+	  <input type="email" ng-model="user.email">
 	</label>
-	
+
 	<label class="item item-input">
   	<span class="input-label">Senha</span>
-  	<input type="password">
+  	<input type="password" ng-model="user.password">
 	</label>
+	
+
 	<label class="item item-input">
   	<span class="input-label">Data de nascimento</span>
-  	<input type="date">
+  	<input type="date" ng-model="user.birthday">
 	</label>
-    </div>	
+
+	</div>
     <div class="button-bar" style="padding: 10px">
 	<button class="button button-stable" ng-click="cadastrar()">
   		Cadastrar
@@ -23,6 +26,7 @@
 	<button class="button button-stable">
   		cancelar
 	</button>
-   </div>	 	
+   </div>
+	 	
   </ion-content>
 </ion-view>

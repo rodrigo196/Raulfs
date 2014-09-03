@@ -1,16 +1,25 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
-	$scope.name = "Rodrigo";
+.controller('DashCtrl', ['$scope', function($scope) {
+	  	
 	$scope.email = "";
         $scope.senha = "";
         $scope.dataNascimento = "";
 
         $scope.cadastrar = function(){
+	   console.log($scope);
            alert("Usuário " + $scope.email + " cadastrado!");
-           console.log("Usuário " + $scope.email + " cadastrado!");
+           console.log("senha " + $scope.senha + " cadastrado!");
+
 	};
-})
+
+        $scope.cancelar = function(){
+            $scope.email = "";
+            $scope.senha = "";
+            $scope.dataNascimento = "";
+        
+	};
+]})
 
 .controller('FriendsCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
