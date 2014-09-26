@@ -32,6 +32,33 @@ define(
 
                 this.db.transaction(populateDB, errorCB, sucessCB);
             };
+
+            this.listUsers = function(sucessCB){
+
+                function queryDB(tx) {
+                    tx.executeSql('SELECT * FROM USER', [], querySuccess, errorCB);
+                }
+
+                function querySuccess(tx, results) {
+
+                    // the number of rows returned by the select statement
+                    var users = [];
+
+                    for (var i = 0; i < results.rows.length; i++) {
+                        users[i] = results.rows.item(i);
+                    }
+
+                    sucessCB(users);
+                }
+
+                function errorCB(err) {
+                    alert("Error processing SQL: " + err.code);
+                }
+
+                this.db.transaction(queryDB, errorCB);
+
+
+            }
         }
 
         return database;

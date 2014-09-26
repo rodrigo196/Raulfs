@@ -2,82 +2,70 @@ angular.module('starter.controllers', [])
 
     .controller('DashCtrl', ['$scope', '$http', function(scope, http) {
 
+        require(["js/model", "js/database"], function(model, database) {
+
+            scope.user = {};
+            scope.user.email = "";
+
+            scope.user.password = "";
+
+            scope.user.birthday = "";
+
+            var _database = new database();
+
+            scope.users = [];
+
+            load();
+
+            scope.cadastrar = function () {
 
 
-        scope.user = {};
-        scope.user.email = "";
-
-        scope.user.password = "";
-
-        scope.user.birthday = "";
-
-        var db = window.openDatabase("database", "1.0", "Test DB", 100000000);
-
-        var log = "";
-
-        scope.users = [];
-
-        load();
-
-        scope.cadastrar = function(){
-
-            require(["js/model", "js/database"], function(model, database){
                 var user = new model();
                 console.log(user);
 
                 var _database = new database();
 
-                _database.openDatabase(function(err){
-                    console.log(err);
-                }, function(){
+                _database.openDatabase(error, function () {
                     _database.insertUser(scope.user.email, scope.user.password, scope.user.birthday, success, error);
-                    function success(){
+                    function success() {
                         load();
                         alert("Usuario cadastrado!");
                     }
-                    function error(err){
+
+                    function error(err) {
                         alert("erro ao cadastrar!");
                         console.log(err);
                     }
                 });
-            });
 
 
+            };
 
-        };
+            scope.cancelar = function () {
+                scope.user.email = "";
+                scope.user.password = "";
+                scope.user.birthday = "";
 
-        scope.cancelar = function(){
-            scope.email = "";
-            scope.senha = "";
-            scope.dataNascimento = "";
+            };
 
-        };
+            function load() {
 
-        function load(){
-            function queryDB(tx) {
-                tx.executeSql('SELECT * FROM USER', [], querySuccess, errorCB);
-            }
-
-            function querySuccess(tx, results) {
-
-                // the number of rows returned by the select statement
-                console.log("Insert ID = " + results.rows.length);
-
-                for (var i  = 0; i < results.rows.length; i++){
-                    scope.users[i] = results.rows.item(i);
+                function succes(users){
+                    scope.users = users;
+                    scope.$apply();
                 }
-                scope.$apply();
+
+                _database.openDatabase(error, function () {
+                    _database.listUsers(succes);
+                });
+
             }
 
-            function errorCB(err) {
-                alert("Error processing SQL: "+err.code);
+            function error(err){
+                console.log(err);
             }
 
-            db.transaction(queryDB, errorCB);
-
-        }
-
-
+        });
     }])
 
     .controller('FriendsCtrl', function($scope, Friends) {
