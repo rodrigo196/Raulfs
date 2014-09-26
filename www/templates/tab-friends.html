@@ -1,12 +1,12 @@
 <ion-view title="Friends">
   <ion-content class="has-header">
-      <ion-item href="#/tab/friend/{{friend.id}}">
-      <div class="card" ng-repeat="friend in friends" >
+      <div class="card" ng-repeat="contact in contacts" >
+          <ion-item href="#/tab/friend/{{contact.id}}">
               <div class="item item-text-wrap">
                   <i class="icon ion-person-add"></i>
-                  {{friend.name}}
+                  {{contact.displayName}}
               </div>
+          </ion-item>
       </div>
-      </ion-item>
   </ion-content>
 </ion-view>

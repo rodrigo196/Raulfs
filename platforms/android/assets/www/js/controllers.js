@@ -69,12 +69,37 @@ angular.module('starter.controllers', [])
     }])
 
     .controller('FriendsCtrl', function($scope, Friends) {
-        $scope.friends = Friends.all();
-        console.log($scope.friends);
+        $scope.contacts = [];
+
+        function onSuccess(contacts) {
+            $scope.contacts = contacts;
+            $scope.$apply();
+        };
+
+        function onError(contactError) {
+            alert('onError!');
+        };
+
+        function loadContacts(){
+            // find all contacts with 'Bob' in any name field
+            console.log("Tentendo obter os contatos!");
+            var options      = new ContactFindOptions();
+            options.filter   = "";
+            options.multiple = true;
+            var fields       = ["displayName", "name", "id"];
+            navigator.contacts.find(fields, onSuccess, onError, options);
+        }
+
+        $scope.findContacts = function (){
+            loadContacts();
+        };
+
+        loadContacts();
     })
 
     .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-        $scope.friend = Friends.get($stateParams.friendId);
+        //$scope.friend = Friends.get($stateParams.friendId);
+
     })
 
     .controller('AccountCtrl', ['$scope' ,function(scope) {

@@ -13,16 +13,16 @@ define(
 
 
 
-            this.openDatabase = function(errorCB, sucessCB){
+            this.openDatabase = function(errorCB, successCB){
                 function populateDB(tx){
                     tx.executeSql('CREATE TABLE IF NOT EXISTS USER(email unique, password, birthday)');
                 }
 
-                this.db.transaction(populateDB, errorCB, sucessCB);
+                this.db.transaction(populateDB, errorCB, successCB);
             };
 
 
-            this.insertUser = function(email, password, birthday, sucessCB, errorCB){
+            this.insertUser = function(email, password, birthday, successCB, errorCB){
 
                 function populateDB(tx){
                     tx.executeSql('CREATE TABLE IF NOT EXISTS USER(email unique, password, birthday)');
@@ -30,10 +30,10 @@ define(
                         + email +'", "'+ password +'", "'+birthday+'")');
                 }
 
-                this.db.transaction(populateDB, errorCB, sucessCB);
+                this.db.transaction(populateDB, errorCB, successCB);
             };
 
-            this.listUsers = function(sucessCB){
+            this.listUsers = function(successCB){
 
                 function queryDB(tx) {
                     tx.executeSql('SELECT * FROM USER', [], querySuccess, errorCB);
@@ -41,14 +41,13 @@ define(
 
                 function querySuccess(tx, results) {
 
-                    // the number of rows returned by the select statement
                     var users = [];
 
                     for (var i = 0; i < results.rows.length; i++) {
                         users[i] = results.rows.item(i);
                     }
 
-                    sucessCB(users);
+                    successCB(users);
                 }
 
                 function errorCB(err) {

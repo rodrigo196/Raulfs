@@ -14,4 +14,13 @@
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/camera/FileHelper.class \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactInfoDTO.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager$4.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager$2.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactAccessorSdk5.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactAccessor.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager$3.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactAccessor$WhereOptions.class \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager$1.class \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/ant-build/dexedLibs/classes-d14f5142eaafefb9bdcf42523f7758b7.jar \

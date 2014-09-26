@@ -52,6 +52,7 @@
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.camera \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/com.ionic.keyboard \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.camera/www \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/Camera.js \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraConstants.js \
@@ -61,6 +62,16 @@
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/com.ionic.keyboard/www \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/com.ionic.keyboard/www/keyboard.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/ContactName.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/ContactOrganization.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/ContactAddress.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/Contact.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/ContactFindOptions.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/contacts.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/ContactError.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/ContactFieldType.js \
+/home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/ContactField.js \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/css/style.css \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/lib/require.js \
 /home/rodrigo/Documentos/Projetos/Raulfs/platforms/android/assets/www/lib/ionic \

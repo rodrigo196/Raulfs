@@ -1,0 +1,36 @@
+<ion-view title="Dashboard">
+  <ion-content class="has-header padding">
+    <h1>Dash</h1>
+    <div>
+	<label class="item item-input">
+	  <span class="input-label">Email</span>
+	  <input type="email" ng-model="user.email" ng-required>
+	</label>
+
+	<label class="item item-input">
+  	<span class="input-label">Senha</span>
+  	<input type="password" ng-model="user.password" ng-required>
+	</label>
+	
+
+	<label class="item item-input">
+  	<span class="input-label">Data de nascimento</span>
+  	<input type="date" ng-model="user.birthday" ng-required>
+	</label>
+
+	</div>
+    <div class="button-bar" style="padding: 10px">
+	<button class="button button-stable" ng-click="cadastrar()">
+  		Cadastrar
+	</button>
+	<button class="button button-stable">
+  		cancelar
+	</button>
+   </div>
+
+      <ul class="list card">
+          <li ng-repeat="usr in users" class="item ion-coffee"> {{usr.email}}</li>
+      </ul>
+	 	
+  </ion-content>
+</ion-view>
