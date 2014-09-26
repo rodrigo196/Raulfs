@@ -11,8 +11,6 @@ define(
         function database(){
             this.db = window.openDatabase("database", "1.0", "Test DB", 100000000);
 
-
-
             this.openDatabase = function(errorCB, successCB){
                 function populateDB(tx){
                     tx.executeSql('CREATE TABLE IF NOT EXISTS USER(email unique, password, birthday)');
@@ -20,7 +18,6 @@ define(
 
                 this.db.transaction(populateDB, errorCB, successCB);
             };
-
 
             this.insertUser = function(email, password, birthday, successCB, errorCB){
 
